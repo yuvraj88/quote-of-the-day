@@ -10,9 +10,9 @@ function App() {
     axios
       .get("https://quote-garden.herokuapp.com/api/v3/quotes/random")
       .then((response) => {
-        console.log(response.data.quote);
-        setQuote(response.data.quote.quoteText);
-        setAuthor(response.data.quote.quoteAuthor);
+        console.log(response.data[0].quote);
+        setQuote(response.data.quote[0].quoteText);
+        setAuthor(response.data.quote[0].quoteAuthor);
       })
       .catch((error) => {});
   }, []);
