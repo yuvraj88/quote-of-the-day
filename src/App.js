@@ -8,7 +8,7 @@ function App() {
   const [authorName, setAuthor] = useState("");
   useEffect(() => {
     axios
-      .get("https://quote-garden.herokuapp.com/api/v2/quotes/random")
+      .get("https://quote-garden.herokuapp.com/api/v3/quotes/random")
       .then((response) => {
         console.log(response.data.quote);
         setQuote(response.data.quote.quoteText);
